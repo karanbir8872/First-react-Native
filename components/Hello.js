@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import { View, Text, StyleSheet, Image } from "react-native";
+import { View, Text, StyleSheet, Image, Button } from "react-native";
 
 export default class JustifyContentBasics extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <View style={{ width: 50, height: 100 }}>
+        <View style={{ width: 10, height: 54 }}>
           <Image
             style={styles.getphoto}
             source={{
@@ -16,10 +16,16 @@ export default class JustifyContentBasics extends Component {
         </View>
         <View style={styles.gettext}>
           <Text style={styles.title}>Butter chicken</Text>
-          <Text style={styles.subtitle}>Amirtsari Lovely Dhaba JALANDHAR</Text>
+          <Text style={styles.subtitle}>Amritsari Lovely Dhaba JALANDHAR</Text>
         </View>
-        <View style={{ width: 100, height: 50 }} />
-        <Text>200</Text>
+        <View style={styles.icon}>
+          <Text style={styles.rupee}>र 210</Text>
+          <Button
+            style={styles.button}
+            title="ADD"
+            onPress={() => Alert.alert("Simple Button pressed")}
+          />
+        </View>
       </View>
     );
   }
@@ -31,19 +37,32 @@ const styles = StyleSheet.create({
     justifyContent: "space-around"
   },
   getphoto: {
-    width: 58,
+    width: 56,
     height: 54,
-    borderRadius: 4
+    borderRadius: 2,
+    marginLeft: -9
   },
   gettext: {
-    width: 100,
-    height: 45
+    width: 150,
+    height: 54
   },
   title: {
-    fontSize: 13,
+    fontSize: 15,
     fontWeight: "bold"
   },
   subtitle: {
-    fontSize: 10
+    fontSize: 10,
+    color: "lightgrey"
+  },
+  icon: {
+    width: 50,
+    height: 54
+  },
+  rupee: {
+    fontSize: 13
+  },
+  button: {
+    backgroundColor: "#fff",
+    borderRadius: 30
   }
 });

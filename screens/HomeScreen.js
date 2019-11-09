@@ -9,10 +9,12 @@ import {
   Image
 } from "react-native";
 
-import { MonoText } from "../components/StyledText";
 import Hello from "../components/Hello";
 import SearchBar from "../components/SearchBar";
 import Banner from "../components/Banner";
+function Separator() {
+  return <View style={styles.separator} />;
+}
 
 export default function HomeScreen() {
   return (
@@ -24,6 +26,7 @@ export default function HomeScreen() {
         <View style={styles.getStartedContainer}>
           <SearchBar />
           <Hello />
+          <Separator />
           <Banner />
         </View>
       </ScrollView>
@@ -77,5 +80,10 @@ const styles = StyleSheet.create({
   },
   navigationFilename: {
     marginTop: 5
+  },
+  separator: {
+    marginVertical: 18,
+    borderBottomColor: "lightgrey",
+    borderBottomWidth: StyleSheet.hairlineWidth
   }
 });
