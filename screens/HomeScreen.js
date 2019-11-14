@@ -11,7 +11,7 @@ import {
 
 import Hello from "../components/Hello";
 import SearchBar from "../components/SearchBar";
-import Banner from "../components/Banner";
+import Header from "../components/Header";
 function Separator() {
   return <View style={styles.separator} />;
 }
@@ -25,9 +25,11 @@ export default function HomeScreen() {
       >
         <View style={styles.getStartedContainer}>
           <SearchBar />
+          <Header />
           <Hello />
           <Separator />
-          <Banner />
+          <Hello />
+          <Separator />
         </View>
       </ScrollView>
     </View>

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, Text, StyleSheet, Image, Button } from "react-native";
+import { View, Text, StyleSheet, Image } from "react-native";
 
 export default class JustifyContentBasics extends Component {
   render() {
@@ -19,12 +19,8 @@ export default class JustifyContentBasics extends Component {
           <Text style={styles.subtitle}>Amritsari Lovely Dhaba JALANDHAR</Text>
         </View>
         <View style={styles.icon}>
-          <Text style={styles.rupee}>र 210</Text>
-          <Button
-            style={styles.button}
-            title="ADD"
-            onPress={() => Alert.alert("Simple Button pressed")}
-          />
+          <Text style={styles.rupee}>₹ 210</Text>
+          <Text style={styles.text}>+ ADD</Text>
         </View>
       </View>
     );
@@ -52,17 +48,24 @@ const styles = StyleSheet.create({
   },
   subtitle: {
     fontSize: 10,
-    color: "lightgrey"
+    color: "#A9A9A9"
   },
   icon: {
-    width: 50,
+    width: 55,
     height: 54
   },
   rupee: {
-    fontSize: 13
+    fontSize: 13,
+    width: 54,
+    textAlign: "center"
   },
-  button: {
+  text: {
+    borderWidth: 1,
+    borderColor: "#F0E68C",
     backgroundColor: "#fff",
-    borderRadius: 30
+    borderRadius: 10,
+    width: 54,
+    textAlign: "center",
+    marginTop: 6
   }
 });
